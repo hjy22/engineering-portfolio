@@ -76,25 +76,24 @@ export default function Home() {
       link: "/projects/mux",
       type: "case-study",
     },
-    {
-      title: "VR Rowing Simulator",
-      subtitle: "Hand-Tracking UI",
-      year: 2025,
-      type: "project",
-    },
-    {
-      title: "Nitrogen Laser",
-      subtitle: "Amplification Circuitry",
-      year: 2025,
-      type: "project",
-    },
-    {
-      title: "Custom Keyboard",
-      subtitle: "ATmega32U4 Firmware · Matrix Scanning",
-      year: 2024,
-      type: "project",
-    },
+  ];
 
+  const smallProjects = [
+    { title: "Nitrogen Laser", description: "Amplification circuitry." },
+    { title: "VR Rowing Simulator", description: "Hand-tracking interface for a virtual rowing experience." },
+    { title: "Custom Keyboard", description: "ATmega32U4 firmware and keyboard matrix scanning." },
+    { title: "Resistor-Chain DAC", description: "Digital-to-analog conversion using a resistor chain." },
+    { title: "Custom Bird Synthesizer", description: "Bird-call sound synthesis." },
+    { title: "Diode Characterization & Signal Detection", description: "ECE 3150 · Diode I–V measurements, exponential amplification, and recovery of a modulated audio signal." },
+    { title: "MOSFET Characterization", description: "ECE 3150 · NMOS and PMOS transfer curves, transconductance, and output resistance." },
+    { title: "CMOS Inverter & Ring Oscillator", description: "ECE 3150 · Inverter delay and power measurements, plus a three-stage ring oscillator." },
+    { title: "Differential Amplifier", description: "ECE 3150 · Differential and common-mode response with tail-resistor and current-source biasing." },
+    { title: "Common-Source Amplifier", description: "ECE 3150 · Bias, loaded gain, and bandwidth characterization on PCB and breadboard circuits." },
+  ];
+
+  const inProgressProjects = [
+    { title: "Optimized Double-Buffered Dalton Board", description: "Double buffering and performance optimization." },
+    { title: "Pipelined TinyRV2 RISC-V CPU", description: "Pipelined processor design using the TinyRV2 instruction set." },
   ];
 
   const sortedProjects = [...projects].sort((a, b) => b.year - a.year);
@@ -106,6 +105,7 @@ export default function Home() {
           <span className={styles.wordmark}>HENRY YOON</span>
           <div className={styles.navLinks}>
             <a href="#projects">Projects</a>
+            <a href="#in-progress">In progress</a>
             <a href="#contact">Contact</a>
           </div>
         </nav>
@@ -166,6 +166,33 @@ export default function Home() {
               );
             })}
           </div>
+        </section>
+
+        <section id="small-projects" className={styles.compactSection} aria-labelledby="small-projects-title">
+          <p className={styles.eyebrow}>Completed</p>
+          <h2 id="small-projects-title">Small projects & experiments</h2>
+          <ul className={styles.compactGrid}>
+            {smallProjects.map((project) => (
+              <li key={project.title}>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+              </li>
+            ))}
+          </ul>
+          <p className={styles.labCredit}>ECE 3150 labs completed with Erica Jiang and Bobby Henkelmann.</p>
+        </section>
+
+        <section id="in-progress" className={styles.compactSection} aria-labelledby="in-progress-title">
+          <p className={styles.eyebrow}>Currently building</p>
+          <h2 id="in-progress-title">In progress</h2>
+          <ul className={styles.compactGrid}>
+            {inProgressProjects.map((project) => (
+              <li key={project.title}>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <section id="contact" className={styles.contact} aria-labelledby="contact-title">

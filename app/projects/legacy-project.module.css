@@ -1,0 +1,8 @@
+.page { width: 100%; }
+.section { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 30px; align-items: center; margin-bottom: 50px; }
+.section > * { min-width: 0; }
+.metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 760px) {
+  .section, .metrics { grid-template-columns: minmax(0, 1fr); }
+  .section { gap: 20px; }
+}

@@ -1,12 +1,6 @@
-export default function MuxPage() {
-    const sectionStyle: React.CSSProperties = {
-      display: "grid",
-      gridTemplateColumns: "1.2fr 1fr",
-      gap: "30px",
-      alignItems: "center",
-      marginBottom: "50px",
-    };
+import styles from "../legacy-project.module.css";
 
+export default function MuxPage() {
     const imgStyle: React.CSSProperties = {
       width: "100%",
       borderRadius: "12px",
@@ -15,6 +9,7 @@ export default function MuxPage() {
 
     return (
       <main
+        className={styles.page}
         style={{
           maxWidth: "1000px",
           margin: "0 auto",
@@ -34,7 +29,7 @@ export default function MuxPage() {
         </p>
 
         {/* SCHEMATIC */}
-        <section style={sectionStyle}>
+        <section className={styles.section}>
           <div>
             <h2>Schematic</h2>
             <p style={{ color: "#bbb", lineHeight: 1.7 }}>
@@ -53,7 +48,7 @@ export default function MuxPage() {
         </section>
 
         {/* LAYOUT */}
-        <section style={sectionStyle}>
+        <section className={styles.section}>
           <div>
             <h2>Layout</h2>
             <p style={{ color: "#bbb", lineHeight: 1.7 }}>

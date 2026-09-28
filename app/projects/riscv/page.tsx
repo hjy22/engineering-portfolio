@@ -1,12 +1,6 @@
-export default function RiscvPage() {
-    const sectionStyle: React.CSSProperties = {
-      display: "grid",
-      gridTemplateColumns: "1.2fr 1fr",
-      gap: "30px",
-      alignItems: "center",
-      marginBottom: "50px",
-    };
+import styles from "../legacy-project.module.css";
 
+export default function RiscvPage() {
     const imgStyle: React.CSSProperties = {
       width: "100%",
       borderRadius: "12px",
@@ -23,6 +17,7 @@ export default function RiscvPage() {
 
     return (
       <main
+        className={styles.page}
         style={{
           maxWidth: "1000px",
           margin: "0 auto",
@@ -40,7 +35,7 @@ export default function RiscvPage() {
           2025 · SystemVerilog · RTL Design · FPGA Implementation
         </p>
 
-        <section style={sectionStyle}>
+        <section className={styles.section}>
           <div>
             <h2>System Overview</h2>
             <p style={{ color: "#bbb", lineHeight: 1.7 }}>
@@ -59,7 +54,7 @@ export default function RiscvPage() {
           />
         </section>
 
-        <section style={sectionStyle}>
+        <section className={styles.section}>
           <div>
             <h2>RTL and Datapath</h2>
             <p style={{ color: "#bbb", lineHeight: 1.7 }}>
@@ -78,7 +73,7 @@ export default function RiscvPage() {
           />
         </section>
 
-        <section style={sectionStyle}>
+        <section className={styles.section}>
           <div>
             <h2>Critical Path Analysis</h2>
             <p style={{ color: "#bbb", lineHeight: 1.7 }}>
@@ -147,13 +142,7 @@ export default function RiscvPage() {
 
         <section style={{ marginBottom: "40px" }}>
           <h2>Performance</h2>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-              gap: "16px",
-            }}
-          >
+          <div className={styles.metrics}>
             <div style={metricStyle}>
               <div style={{ color: "#888", fontSize: "0.9rem", marginBottom: "8px" }}>
                 Min Cycle Time
