@@ -1,0 +1,146 @@
+{
+  "decoder-topology": {
+    "src": "/images/reports/decoder-topology.webp",
+    "width": 1017,
+    "height": 1143,
+    "source": "lab2/image18.png"
+  },
+  "decoder-layout": {
+    "src": "/images/reports/decoder-layout.webp",
+    "width": 1142,
+    "height": 1372,
+    "source": "lab2/image19.png"
+  },
+  "decoder-driver": {
+    "src": "/images/reports/decoder-driver.webp",
+    "width": 1201,
+    "height": 681,
+    "source": "lab2/image7.png"
+  },
+  "decoder-waveform": {
+    "src": "/images/reports/decoder-waveform.webp",
+    "width": 1063,
+    "height": 626,
+    "source": "lab2/image10.png"
+  },
+  "dff-schematic": {
+    "src": "/images/reports/dff-schematic.webp",
+    "width": 1028,
+    "height": 580,
+    "source": "lab3/image13.png"
+  },
+  "dff-layout": {
+    "src": "/images/reports/dff-layout.webp",
+    "width": 756,
+    "height": 630,
+    "source": "lab3/image10.png"
+  },
+  "dff-waveform": {
+    "src": "/images/reports/dff-waveform.webp",
+    "width": 1664,
+    "height": 492,
+    "source": "lab3/image7.png"
+  },
+  "sram-bitcell": {
+    "src": "/images/reports/sram-bitcell.webp",
+    "width": 1232,
+    "height": 871,
+    "source": "lab4/image23.png"
+  },
+  "sram-layout": {
+    "src": "/images/reports/sram-layout.webp",
+    "width": 619,
+    "height": 706,
+    "source": "lab4/image15.png"
+  },
+  "sram-sense-amplifier": {
+    "src": "/images/reports/sram-sense-amplifier.webp",
+    "width": 711,
+    "height": 554,
+    "source": "lab4/image2.png"
+  },
+  "sram-waveform": {
+    "src": "/images/reports/sram-waveform.webp",
+    "width": 1910,
+    "height": 850,
+    "source": "lab4/image27.png"
+  },
+  "fpga-architecture": {
+    "src": "/images/reports/fpga-architecture.webp",
+    "width": 670,
+    "height": 654,
+    "source": "final/image7.png"
+  },
+  "fpga-clb": {
+    "src": "/images/reports/fpga-clb.webp",
+    "width": 1076,
+    "height": 579,
+    "source": "final/image11.png"
+  },
+  "fpga-clb-layout": {
+    "src": "/images/reports/fpga-clb-layout.webp",
+    "width": 696,
+    "height": 675,
+    "source": "final/image16.png"
+  },
+  "fpga-routing-test": {
+    "src": "/images/reports/fpga-routing-test.webp",
+    "width": 678,
+    "height": 470,
+    "source": "final/image5.png"
+  },
+  "fpga-waveform": {
+    "src": "/images/reports/fpga-waveform.webp",
+    "width": 991,
+    "height": 635,
+    "source": "final/image15.png"
+  },
+  "bmb-board": {
+    "src": "/images/reports/bmb-board.webp",
+    "width": 2000,
+    "height": 845,
+    "source": "BMB_S2026 (1).pdf, PDF page 1, image 1"
+  },
+  "bmb-power-path": {
+    "src": "/images/reports/bmb-power-path.webp",
+    "width": 1462,
+    "height": 804,
+    "source": "BMB_S2026 (1).pdf, PDF page 12, image 1"
+  },
+  "bmb-front": {
+    "src": "/images/reports/bmb-front.webp",
+    "width": 1646,
+    "height": 694,
+    "source": "BMB_S2026 (1).pdf, PDF page 17, image 2"
+  },
+  "bmb-wake": {
+    "src": "/images/reports/bmb-wake.webp",
+    "width": 776,
+    "height": 600,
+    "source": "BMB_S2026 (1).pdf, PDF page 15, image 1"
+  },
+  "sensor-board": {
+    "src": "/images/reports/sensor-board.webp",
+    "width": 1466,
+    "height": 1304,
+    "source": "Sensor Doc Spring 2025.pdf, PDF page 1, image 1"
+  },
+  "sensor-mcu": {
+    "src": "/images/reports/sensor-mcu.webp",
+    "width": 1554,
+    "height": 1116,
+    "source": "Sensor Doc Spring 2025.pdf, PDF page 11, image 1"
+  },
+  "sensor-pressure": {
+    "src": "/images/reports/sensor-pressure.webp",
+    "width": 584,
+    "height": 554,
+    "source": "Sensor Doc Spring 2025.pdf, PDF page 13, image 2"
+  },
+  "sensor-front": {
+    "src": "/images/reports/sensor-front.webp",
+    "width": 714,
+    "height": 632,
+    "source": "Sensor Doc Spring 2025.pdf, PDF page 17, image 1"
+  }
+}

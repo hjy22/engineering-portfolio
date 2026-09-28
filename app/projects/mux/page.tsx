@@ -1,0 +1,130 @@
+export default function MuxPage() {
+    const sectionStyle: React.CSSProperties = {
+      display: "grid",
+      gridTemplateColumns: "1.2fr 1fr",
+      gap: "30px",
+      alignItems: "center",
+      marginBottom: "50px",
+    };
+
+    const imgStyle: React.CSSProperties = {
+      width: "100%",
+      borderRadius: "12px",
+      border: "1px solid #222",
+    };
+
+    return (
+      <main
+        style={{
+          maxWidth: "1000px",
+          margin: "0 auto",
+          padding: "40px 20px 80px",
+          color: "#eee",
+          fontFamily:
+            'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+        }}
+      >
+        {/* TITLE */}
+        <h1 style={{ fontSize: "2.5rem", marginBottom: "10px" }}>
+          4:1 Multiplexer (Pass-Gate Architecture)
+        </h1>
+
+        <p style={{ color: "#aaa", marginBottom: "40px" }}>
+          2026 · VLSI · Cadence Virtuoso · CMOS Design
+        </p>
+
+        {/* SCHEMATIC */}
+        <section style={sectionStyle}>
+          <div>
+            <h2>Schematic</h2>
+            <p style={{ color: "#bbb", lineHeight: 1.7 }}>
+              Designed a 4:1 multiplexer using pass-gate CMOS architecture.
+              Transmission gates controlled by complementary select signals allow
+              full voltage swing while minimizing transistor count and input
+              capacitance.
+            </p>
+          </div>
+
+          <img
+            src="/images/mux.png"
+            alt="MUX schematic"
+            style={imgStyle}
+          />
+        </section>
+
+        {/* LAYOUT */}
+        <section style={sectionStyle}>
+          <div>
+            <h2>Layout</h2>
+            <p style={{ color: "#bbb", lineHeight: 1.7 }}>
+              Implemented the layout with attention to symmetry and routing
+              efficiency. Transistor placement was optimized to reduce parasitic
+              capacitance and ensure consistent delay across all input paths.
+            </p>
+          </div>
+
+          <img
+            src="/images/mux-layout.png"
+            alt="MUX layout"
+            style={imgStyle}
+          />
+        </section>
+
+        {/* OVERVIEW */}
+        <section style={{ marginBottom: "40px" }}>
+          <h2>Overview</h2>
+          <p style={{ color: "#bbb", lineHeight: 1.7 }}>
+            Designed a 4:1 multiplexer at the transistor level in Cadence Virtuoso.
+            The design prioritizes low delay, reduced capacitance, and reliable
+            signal transmission while maintaining full voltage swing.
+          </p>
+        </section>
+
+        {/* DESIGN DECISIONS */}
+        <section style={{ marginBottom: "40px" }}>
+          <h2>Design Decisions</h2>
+          <ul style={{ color: "#bbb", lineHeight: 1.8 }}>
+            <li>
+              <strong>Pass-Gate Architecture:</strong> Reduced transistor count and
+              input capacitance compared to static CMOS.
+            </li>
+            <li>
+              <strong>Transmission Gates:</strong> Prevented threshold voltage drop
+              and ensured full signal swing.
+            </li>
+            <li>
+              <strong>Sizing:</strong> Balanced resistance and capacitance to
+              optimize delay without overloading previous stages.
+            </li>
+            <li>
+              <strong>Select Logic:</strong> Carefully generated complementary
+              control signals to avoid contention.
+            </li>
+          </ul>
+        </section>
+
+        {/* RESULTS */}
+        <section style={{ marginBottom: "40px" }}>
+          <h2>Results</h2>
+          <p style={{ color: "#bbb", lineHeight: 1.7 }}>
+            The design achieved correct switching behavior with clean signal
+            transitions. The pass-gate implementation reduced area and loading
+            while maintaining strong signal integrity.
+          </p>
+        </section>
+
+        {/* BACK LINK */}
+        <a
+          href="/"
+          style={{
+            color: "#aaa",
+            textDecoration: "none",
+            marginTop: "20px",
+            display: "inline-block",
+          }}
+        >
+          ← Back to Home
+        </a>
+      </main>
+    );
+  }
