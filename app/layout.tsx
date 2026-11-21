@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Henry Yoon — Electrical Engineer",
-  description: "Electrical and computer engineering portfolio focused on embedded systems, PCB design, digital hardware, and power electronics.",
+  title: "Henry Yoon",
+  description: "Incoming Apple hardware systems electrical engineering intern for Spring and Summer 2027.",
 };
 
 export default function RootLayout({
