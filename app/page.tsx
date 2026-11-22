@@ -157,7 +157,7 @@ export default function Home() {
                   fill
                   sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw"
                 />
-                <span className={styles.imageIndex}>07</span>
+                <span className={styles.imageIndex}>06</span>
               </div>
               <div className={styles.cardBody}>
                 <div className={styles.cardTopline}>
