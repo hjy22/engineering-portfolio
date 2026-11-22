@@ -100,7 +100,6 @@ export default function Home() {
               I’m a Cornell Electrical and Computer Engineering student and a member of CUAUV.
               I previously worked at HavocAI. Outside of engineering, I enjoy playing badminton and cooking!
             </p>
-            <a className={styles.downLink} href="#projects">↓ &nbsp; have a look around</a>
           </div>
 
           <aside className={styles.profileNote}>
@@ -118,7 +117,6 @@ export default function Home() {
               <a href="https://linkedin.com/in/hjy22" target="_blank" rel="noopener noreferrer">linkedin ↗</a>
             </div>
           </aside>
-          <span className={styles.doodle} aria-hidden="true">⌁</span>
         </header>
 
         <CareerTimeline />

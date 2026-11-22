@@ -9,8 +9,8 @@
   --body-copy: #655f55;
   --note-paper: #e8dfce;
   --link-hover: #5c1728;
-  --marker: #7d1f34;
-  --marker-foreground: #fff;
+  --marker: #ba807a;
+  --marker-foreground: var(--ink);
   --tape: rgb(125 31 52 / 72%);
   --image-border: #d5cdbc;
   --image-bg: #e9e3d7;
@@ -215,19 +215,6 @@
   line-height: 1.8;
 }
 
-.downLink {
-  display: inline-block;
-  margin-top: 30px;
-  color: var(--ink);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 11px;
-  text-decoration: none;
-}
-
-.downLink:hover {
-  color: var(--link-hover);
-}
-
 .profileNote {
   position: relative;
   align-self: center;
@@ -271,16 +258,6 @@
   gap: 15px;
   padding: 0 2px;
   font-size: 11px;
-}
-
-.doodle {
-  position: absolute;
-  right: 36%;
-  bottom: 55px;
-  color: var(--orange);
-  font-family: Georgia, serif;
-  font-size: 72px;
-  transform: rotate(-18deg);
 }
 
 .projects,
@@ -621,12 +598,6 @@
   .profileNote {
     width: min(230px, 72%);
     justify-self: center;
-  }
-
-  .doodle {
-    right: 12%;
-    bottom: 43px;
-    font-size: 54px;
   }
 
   .projects,
