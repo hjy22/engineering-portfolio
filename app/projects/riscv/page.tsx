@@ -1,44 +1,33 @@
+import Link from "next/link";
 import styles from "../legacy-project.module.css";
 
 export default function RiscvPage() {
     const imgStyle: React.CSSProperties = {
       width: "100%",
-      borderRadius: "12px",
-      border: "1px solid #222",
-      backgroundColor: "#111",
+      border: "1px solid var(--site-image-border)",
+      backgroundColor: "var(--site-image-bg)",
     };
 
     const metricStyle: React.CSSProperties = {
-      border: "1px solid #1f1f1f",
-      borderRadius: "16px",
+      border: "1px solid var(--site-rule)",
       padding: "20px",
-      backgroundColor: "#0a0a0a",
+      backgroundColor: "var(--site-panel)",
     };
 
     return (
-      <main
-        className={styles.page}
-        style={{
-          maxWidth: "1000px",
-          margin: "0 auto",
-          padding: "40px 20px 80px",
-          color: "#eee",
-          fontFamily:
-            'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-        }}
-      >
+      <main className={styles.page}>
         <h1 style={{ fontSize: "2.5rem", marginBottom: "10px" }}>
           TinyRV1 Single-Cycle Processor
         </h1>
 
-        <p style={{ color: "#aaa", marginBottom: "40px" }}>
+        <p style={{ color: "var(--site-pencil)", marginBottom: "40px" }}>
           2025 · SystemVerilog · RTL Design · FPGA Implementation
         </p>
 
         <section className={styles.section}>
           <div>
             <h2>System Overview</h2>
-            <p style={{ color: "#bbb", lineHeight: 1.7 }}>
+            <p style={{ color: "var(--site-body-copy)", lineHeight: 1.7 }}>
               Designed a single-cycle TinyRV1 processor capable of executing
               assembly instructions in hardware. The system was implemented on an
               FPGA, used to run custom assembly programs, and later extended with
@@ -57,7 +46,7 @@ export default function RiscvPage() {
         <section className={styles.section}>
           <div>
             <h2>RTL and Datapath</h2>
-            <p style={{ color: "#bbb", lineHeight: 1.7 }}>
+            <p style={{ color: "var(--site-body-copy)", lineHeight: 1.7 }}>
               The processor was built around a single-cycle datapath and control
               unit that decode and execute instructions according to the ISA. The
               design integrates instruction fetch, register file access, ALU
@@ -76,7 +65,7 @@ export default function RiscvPage() {
         <section className={styles.section}>
           <div>
             <h2>Critical Path Analysis</h2>
-            <p style={{ color: "#bbb", lineHeight: 1.7 }}>
+            <p style={{ color: "var(--site-body-copy)", lineHeight: 1.7 }}>
               Quartus timing analysis identified a long critical path spanning the
               memory bus, physical memory, instruction/data memory interfaces,
               register file, ALU adder, writeback mux, and back into the register
@@ -94,7 +83,7 @@ export default function RiscvPage() {
 
         <section style={{ marginBottom: "40px" }}>
           <h2>Overview</h2>
-          <p style={{ color: "#bbb", lineHeight: 1.7 }}>
+          <p style={{ color: "var(--site-body-copy)", lineHeight: 1.7 }}>
             This project focused on implementing a general-purpose single-cycle
             processor and then analyzing its performance on real hardware. After
             building the processor, I wrote and ran assembly programs including a
@@ -105,7 +94,7 @@ export default function RiscvPage() {
 
         <section style={{ marginBottom: "40px" }}>
           <h2>Key Design Elements</h2>
-          <ul style={{ color: "#bbb", lineHeight: 1.8 }}>
+          <ul style={{ color: "var(--site-body-copy)", lineHeight: 1.8 }}>
             <li>
               <strong>Single-cycle datapath:</strong> Each instruction is fetched,
               decoded, executed, and written back in one clock cycle.
@@ -131,7 +120,7 @@ export default function RiscvPage() {
 
         <section style={{ marginBottom: "40px" }}>
           <h2>Assembly Program</h2>
-          <p style={{ color: "#bbb", lineHeight: 1.7 }}>
+          <p style={{ color: "var(--site-body-copy)", lineHeight: 1.7 }}>
             To test the processor, I used an accumulate assembly program that
             initialized a base memory address, iterated through an array, loaded
             each value, added it to a running sum, incremented the address, and
@@ -144,21 +133,21 @@ export default function RiscvPage() {
           <h2>Performance</h2>
           <div className={styles.metrics}>
             <div style={metricStyle}>
-              <div style={{ color: "#888", fontSize: "0.9rem", marginBottom: "8px" }}>
+              <div style={{ color: "var(--site-pencil)", fontSize: "0.9rem", marginBottom: "8px" }}>
                 Min Cycle Time
               </div>
               <div style={{ fontSize: "1.8rem", fontWeight: 700 }}>57.308 ns</div>
             </div>
 
             <div style={metricStyle}>
-              <div style={{ color: "#888", fontSize: "0.9rem", marginBottom: "8px" }}>
+              <div style={{ color: "var(--site-pencil)", fontSize: "0.9rem", marginBottom: "8px" }}>
                 Measured Runtime
               </div>
               <div style={{ fontSize: "1.8rem", fontWeight: 700 }}>12.7 µs</div>
             </div>
 
             <div style={metricStyle}>
-              <div style={{ color: "#888", fontSize: "0.9rem", marginBottom: "8px" }}>
+              <div style={{ color: "var(--site-pencil)", fontSize: "0.9rem", marginBottom: "8px" }}>
                 ALM Utilization
               </div>
               <div style={{ fontSize: "1.8rem", fontWeight: 700 }}>36%</div>
@@ -168,7 +157,7 @@ export default function RiscvPage() {
 
         <section style={{ marginBottom: "40px" }}>
           <h2>Area and Resource Use</h2>
-          <p style={{ color: "#bbb", lineHeight: 1.7 }}>
+          <p style={{ color: "var(--site-body-copy)", lineHeight: 1.7 }}>
             Synthesis showed that the processor occupied a substantial portion of
             the FPGA fabric, using 15,544 combinational ALUTs and 6,001 dedicated
             logic registers. Relative to earlier lab projects, it required
@@ -179,7 +168,7 @@ export default function RiscvPage() {
 
         <section style={{ marginBottom: "40px" }}>
           <h2>Design Tradeoffs</h2>
-          <p style={{ color: "#bbb", lineHeight: 1.7 }}>
+          <p style={{ color: "var(--site-body-copy)", lineHeight: 1.7 }}>
             A key lesson from this project was the tradeoff between generality and
             efficiency. The processor can execute a broad range of instructions
             and control flow, but that flexibility increases both area and delay.
@@ -191,7 +180,7 @@ export default function RiscvPage() {
 
         <section style={{ marginBottom: "40px" }}>
           <h2>Takeaways</h2>
-          <p style={{ color: "#bbb", lineHeight: 1.7 }}>
+          <p style={{ color: "var(--site-body-copy)", lineHeight: 1.7 }}>
             This project gave me hands-on experience building a processor from the
             ISA level down to RTL and FPGA implementation. It strengthened my
             understanding of datapath and control design, hardware/software
@@ -200,17 +189,17 @@ export default function RiscvPage() {
           </p>
         </section>
 
-        <a
+        <Link
           href="/"
           style={{
-            color: "#aaa",
+            color: "var(--site-pencil)",
             textDecoration: "none",
             marginTop: "20px",
             display: "inline-block",
           }}
         >
           ← Back to Home
-        </a>
+        </Link>
       </main>
     );
   }

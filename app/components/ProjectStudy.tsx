@@ -42,8 +42,8 @@ function Figure({ figure, hero = false }: { figure: StudyFigure; hero?: boolean 
 export default function ProjectStudy({ study }: { study: Study }) {
   return (
     <main className={styles.page}>
+      <div className={styles.paper}>
       <nav className={styles.nav} aria-label="Project navigation">
-        <Link href="/" className={styles.wordmark}>HENRY YOON</Link>
         <Link href="/#projects">All projects <span aria-hidden="true">↗</span></Link>
       </nav>
       <header className={styles.header}>
@@ -83,6 +83,7 @@ export default function ProjectStudy({ study }: { study: Study }) {
         <p>{study.credit}</p>
         <Link href="/#projects">← All projects</Link>
       </footer>
+      </div>
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ThemeToggle from "@/components/ThemeToggle";
+import CareerTimeline from "@/components/CareerTimeline";
 import styles from "./page.module.css";
 
 const projects = [
@@ -28,17 +29,9 @@ const projects = [
     note: "A lot of transistors for one address.",
   },
   {
-    title: "RISC-V Single Cycle Processor",
-    subtitle: "ECE 2300 · Quartus · SystemVerilog",
-    image: "/images/2300.png",
-    year: "2025",
-    href: "/projects/riscv",
-    note: "Built the processor one instruction at a time.",
-  },
-  {
     title: "FPGA Fabric with Hardened DSP",
     subtitle: "ECE 4740 · CLB Design · Programmable Logic",
-    image: "/images/reports/fpga-clb-layout.webp",
+    image: "/projects/fpga/fabric-routing.png",
     year: "2026",
     href: "/projects/fpga",
     note: "My own tiny programmable logic playground.",
@@ -51,35 +44,26 @@ const projects = [
     href: "/projects/sram",
     note: "1024 bits, laid out by hand.",
   },
-  {
-    title: "Custom D Flip-Flop",
-    subtitle: "ECE 4740 · Sequential Logic · Timing",
-    image: "/images/reports/dff-layout.webp",
-    year: "2026",
-    href: "/projects/dff",
-    note: "A small building block with big timing opinions.",
-  },
-  {
-    title: "4:1 Multiplexer",
-    subtitle: "VLSI · Cadence · Layout",
-    image: "/images/mux-layout.png",
-    year: "2026",
-    href: "/projects/mux",
-    note: "Four inputs enter. One signal leaves.",
-  },
 ];
 
 const sideProjects = [
-  { title: "Nitrogen Laser", detail: "Amplification circuitry" },
+  { title: "Nitrogen Laser", detail: "AEP 1100" },
   { title: "VR Rowing Simulator", detail: "Hand-tracking for a virtual rowing experience" },
   { title: "Custom Keyboard", detail: "ATmega32U4 firmware & keyboard matrix scanning" },
-  { title: "Resistor-Chain DAC", detail: "Digital-to-analog conversion, resistor by resistor" },
-  { title: "Custom Bird Synthesizer", detail: "Bird-call sound synthesis" },
-  { title: "Diode Characterization & Signal Detection", detail: "ECE 3150 · I–V curves and modulated audio recovery" },
-  { title: "MOSFET Characterization", detail: "ECE 3150 · Transfer curves, gm & output resistance" },
-  { title: "CMOS Inverter & Ring Oscillator", detail: "ECE 3150 · Delay, power & a three-stage oscillator" },
-  { title: "Differential Amplifier", detail: "ECE 3150 · Differential and common-mode response" },
-  { title: "Common-Source Amplifier", detail: "ECE 3150 · Bias, gain & bandwidth" },
+  { title: "Resistor-Chain DAC", detail: "ECE 2100" },
+  { title: "Custom Bird Synthesizer", detail: "ECE 4760" },
+  { title: "Diode Characterization & Signal Detection", detail: "ECE 3150" },
+  { title: "MOSFET Characterization", detail: "ECE 3150" },
+  { title: "CMOS Inverter & Ring Oscillator", detail: "ECE 3150" },
+  { title: "Differential Amplifier", detail: "ECE 3150" },
+  { title: "Common-Source Amplifier", detail: "ECE 3150" },
+  { title: "RISC-V Single Cycle Processor", detail: "ECE 2300" },
+  { title: "4:1 Multiplexer", detail: "ECE 4740" },
+  { title: "Custom D Flip-Flop", detail: "ECE 4740" },
+  { title: "Direct-Mapped & Two-Way Set-Associative Caches", detail: "ECE 4750" },
+  { title: "Pipelined RISC-V Processor", detail: "ECE 4750" },
+  { title: "1 kHz PID-Controlled 1D Helicopter", detail: "ECE 4760" },
+  { title: "Digital Galton Board", detail: "ECE 4760" },
 ];
 
 const inProgress = [
@@ -94,6 +78,7 @@ export default function Home() {
         <nav className={styles.nav} aria-label="Main navigation">
           <a className={styles.wordmark} href="#top"><span> </span></a>
           <div className={styles.navLinks}>
+            <a href="#career">career</a>
             <a href="#projects">projects</a>
             <a href="#little-projects">little projects</a>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">resume ↗</a>
@@ -136,6 +121,8 @@ export default function Home() {
           <span className={styles.doodle} aria-hidden="true">⌁</span>
         </header>
 
+        <CareerTimeline />
+
         <section id="projects" className={styles.projects} aria-labelledby="projects-title">
           <div className={styles.sectionHeading}>
             <div>
@@ -162,13 +149,31 @@ export default function Home() {
                 </div>
               </a>
             ))}
+            <article className={`${styles.projectCard} ${styles.projectCardStatic}`}>
+              <div className={styles.projectImage}>
+                <Image
+                  src="/projects/pli/payload-interface-board-card.png"
+                  alt="HavocAI payload interface board"
+                  fill
+                  sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw"
+                />
+                <span className={styles.imageIndex}>07</span>
+              </div>
+              <div className={styles.cardBody}>
+                <div className={styles.cardTopline}>
+                  <span>HavocAI · Confidential</span>
+                  <span>V1 &amp; V2</span>
+                </div>
+                <h3>Payload Interface Board</h3>
+                <p>Project details are confidential.</p>
+              </div>
+            </article>
           </div>
         </section>
 
         <section id="little-projects" className={styles.sideProjects} aria-labelledby="little-projects-title">
           <div className={styles.sectionHeading}>
             <div>
-              <p className={styles.eyebrow}>Experiments, classwork & side quests</p>
               <h2 id="little-projects-title">And some little ones<span>…</span></h2>
             </div>
           </div>

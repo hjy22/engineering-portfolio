@@ -5,11 +5,13 @@
   --ink: #24231f;
   --pencil: #777267;
   --rule: #d7d0c0;
-  --orange: #e8794f;
+  --orange: #7d1f34;
   --body-copy: #655f55;
   --note-paper: #e8dfce;
-  --link-hover: #b64c2e;
-  --marker: #f3bd83;
+  --link-hover: #5c1728;
+  --marker: #7d1f34;
+  --marker-foreground: #fff;
+  --tape: rgb(125 31 52 / 72%);
   --image-border: #d5cdbc;
   --image-bg: #e9e3d7;
   --section-tint: rgb(237 229 213 / 56%);
@@ -33,11 +35,13 @@
   --ink: #f0ece2;
   --pencil: #aaa69b;
   --rule: #42413a;
-  --orange: #f39a70;
+  --orange: #b04b5c;
   --body-copy: #c3bfb3;
   --note-paper: #292923;
-  --link-hover: #ffb08d;
-  --marker: #67472f;
+  --link-hover: #bc495e;
+  --marker: #6f1f30;
+  --marker-foreground: #f0ece2;
+  --tape: rgb(111 31 48 / 72%);
   --image-border: #44433c;
   --image-bg: #252621;
   --section-tint: rgb(255 255 255 / 3%);
@@ -187,6 +191,7 @@
 .marker {
   position: relative;
   z-index: 0;
+  color: var(--marker-foreground);
   white-space: nowrap;
 }
 
@@ -220,7 +225,7 @@
 }
 
 .downLink:hover {
-  color: #b64c2e;
+  color: var(--link-hover);
 }
 
 .profileNote {
@@ -239,15 +244,16 @@
   left: 50%;
   width: 82px;
   height: 26px;
-  background: rgb(228 184 112 / 72%);
+  background: var(--tape);
   transform: translateX(-50%) rotate(-4deg);
 }
 
 .portrait {
   display: block;
-  width: 100%;
+  width: calc(100% - 12px);
   height: auto;
   aspect-ratio: 1;
+  margin: 0 auto 12px;
   object-fit: cover;
   filter: saturate(0.82);
 }
@@ -407,6 +413,11 @@
   opacity: 1;
 }
 
+.projectCardStatic:hover .projectImage,
+.projectCardStatic:hover .projectImage img {
+  transform: none;
+}
+
 .cardBody > p {
   margin: 5px 0 0;
   color: var(--body-copy);
@@ -417,12 +428,18 @@
 
 .sideProjects {
   background: var(--section-tint);
+  padding-top: 40px;
+  padding-bottom: 42px;
+}
+
+.sideProjects .sectionHeading {
+  margin-bottom: 20px;
 }
 
 .sideProjectList {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 48px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 28px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -430,9 +447,9 @@
 
 .sideProjectList li {
   display: grid;
-  grid-template-columns: 28px minmax(0, 1fr);
-  column-gap: 10px;
-  padding: 16px 0;
+  grid-template-columns: 24px minmax(0, 1fr);
+  column-gap: 8px;
+  padding: 12px 0;
   border-top: 1px dashed var(--dashed-rule);
 }
 
@@ -447,16 +464,16 @@
 .sideProjectList h3 {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: -0.025em;
 }
 
 .sideProjectList p {
-  margin: 5px 0 0;
+  margin: 3px 0 0;
   color: var(--pencil);
-  font-size: 11px;
-  line-height: 1.5;
+  font-size: 10px;
+  line-height: 1.4;
 }
 
 .inProgress h2 {
@@ -550,6 +567,7 @@
   .projectGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
 }
 
 @media (max-width: 600px) {
@@ -617,6 +635,11 @@
     padding: 52px 2% 58px;
   }
 
+  .sideProjects {
+    padding-top: 30px;
+    padding-bottom: 32px;
+  }
+
   .sectionHeading {
     align-items: flex-start;
     flex-direction: column;
@@ -628,9 +651,13 @@
   }
 
   .projectGrid,
-  .sideProjectList,
   .inProgress ul {
     grid-template-columns: 1fr;
+  }
+
+  .sideProjectList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
   }
 
   .projectGrid {

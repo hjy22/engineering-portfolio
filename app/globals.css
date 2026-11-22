@@ -1,8 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050505;
-  --foreground: #f5f5f5;
+  --site-outer: #e8e1d3;
+  --site-pattern: #8e8063;
+  --site-paper: #f5f0e5;
+  --site-ink: #24231f;
+  --site-pencil: #777267;
+  --site-rule: #d7d0c0;
+  --site-orange: #7d1f34;
+  --site-body-copy: #655f55;
+  --site-image-border: #d5cdbc;
+  --site-image-bg: #e9e3d7;
+  --site-panel: rgb(255 255 255 / 28%);
+  --background: var(--site-outer);
+  --foreground: var(--site-ink);
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --site-outer: #111210;
+  --site-pattern: #45443d;
+  --site-paper: #1d1e1b;
+  --site-ink: #f0ece2;
+  --site-pencil: #aaa69b;
+  --site-rule: #42413a;
+  --site-orange: #b04b5c;
+  --site-body-copy: #c3bfb3;
+  --site-image-border: #44433c;
+  --site-image-bg: #252621;
+  --site-panel: rgb(255 255 255 / 3%);
+  --background: var(--site-outer);
+  --foreground: var(--site-ink);
   color-scheme: dark;
 }
 
@@ -14,11 +42,13 @@
 }
 
 html {
-  background: var(--background);
+  background: var(--site-outer);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--site-outer);
+  background-image: radial-gradient(var(--site-pattern) 0.45px, transparent 0.45px);
+  background-size: 7px 7px;
+  color: var(--site-ink);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
